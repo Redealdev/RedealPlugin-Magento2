@@ -64,9 +64,9 @@
         coupons: [ "<?php echo $orderdetail->getCouponCode(); ?>" ],
         products: <?php echo $productdetail; ?>
     });
+	
 
-
-    window.dataLayer = window.dataLayer || [];
+    /*window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       'ecommerce': {
         'purchase': {
@@ -83,7 +83,7 @@
          
         }
       }
-    });
+    });*/
   
 </script>
 <script type="text/javascript">
@@ -108,15 +108,6 @@
     console.log("coupons: [ <?php echo $orderdetail->getCouponCode(); ?> ],");
     console.log('products: <?php echo $productdetail; ?>');
 
-    console.log(" ");
-    
-    console.log("Google Tag Manager");
-    console.log("id: <?php echo $orderdetail->getIncrementId(); ?>,");
-    console.log("revenue: <?php echo $revenue; ?>,");
-    console.log("tax: <?php echo number_format($orderdetail->getTaxAmount(), 2, '.', ''); ?>,");
-    console.log("shipping: <?php echo number_format($orderdetail->getShippingAmount(), 2, '.', ''); ?>,");
-    console.log("currency: <?php echo $orderdetail->getOrderCurrencyCode(); ?>,");
-    console.log("coupon: <?php echo $orderdetail->getCouponCode(); ?>,");
-    console.log('products: <?php echo $productdetail; ?>');
+    console.log(" ");    
 });
 </script>
